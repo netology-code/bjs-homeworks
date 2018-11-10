@@ -63,18 +63,18 @@ console.log("Отправили: " + smsNotification);
 
 ### Ожидаемый результат
 ```javascript
-console.log(sender.isEmailNotification(notification));
+console.log(isEmailNotification(notification));
 // false
-console.log(sender.isEmailNotification(smsNotification));
+console.log(isEmailNotification(smsNotification));
 // false
-console.log(sender.isEmailNotification(emailNotification));
+console.log(isEmailNotification(emailNotification));
 // true
 
-console.log(sender.isSmsNotification(notification));
+console.log(isSmsNotification(notification));
 // false
-console.log(sender.isSmsNotification(smsNotification));
+console.log(isSmsNotification(smsNotification));
 // true
-console.log(sender.isSmsNotification(emailNotification));
+console.log(isSmsNotification(emailNotification));
 // false
 ```
 ---
