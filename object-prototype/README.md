@@ -62,7 +62,7 @@ console.log("Отправили: " + smsNotification);
 3. Внутри функция распознает объекты по наличию свойст `phoneNumber` и `email`.
 
 ### Ожидаемый результат
-
+```javascript
 console.log(sender.isEmailNotification(notification));
 // false
 console.log(sender.isEmailNotification(smsNotification));
@@ -76,7 +76,7 @@ console.log(sender.isSmsNotification(smsNotification));
 // true
 console.log(sender.isSmsNotification(emailNotification));
 // false
-
+```
 ---
 Инструкция по выполнению домашнего задания:
 
