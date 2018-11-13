@@ -11,6 +11,7 @@ function CalculateQuadraticEquation(){
 }
 
 function GetResult(a,b,c){
+    // код для задачи №1 писать здесь
     //return x;
 }
 
@@ -22,7 +23,9 @@ function CalculateDrinkTask(){
 }
 
 function AskDrink(name,age){
-    return null;
+    // код для задачи №2 писать здесь
+    //console.log(result)
+    //return result;
 }
 
 function CalculateAverageRating(){
@@ -32,5 +35,6 @@ function CalculateAverageRating(){
 }
 
 function GetAverageMark(marks){
-    return null;
+    // код для задачи №3 писать здесь
+    //return averageMark;
 }
