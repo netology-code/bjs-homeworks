@@ -17,12 +17,12 @@ function GetResult(a,b,c){
 
 function CalculateDrinkTask(){
     let name = window.name.value;
-    let age = +window.age.value;
-    let drink = AskDrink(name, age);
+    let dateOfBirthday = new Date(window.dateOfBirthday.value);
+    let drink = AskDrink(name, dateOfBirthday);
     window.drink.textContent = drink;
 }
 
-function AskDrink(name,age){
+function AskDrink(name,dateOfBirthday){
     // код для задачи №2 писать здесь
     //console.log(result)
     //return result;
