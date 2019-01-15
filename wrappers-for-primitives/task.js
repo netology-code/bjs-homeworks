@@ -10,12 +10,13 @@ function calculateMortgage() {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
+
     // код для задачи №1 писать здесь
     //return totalAmount;
 }
 
 function sayHello() {
-    let name = window.name.value;
+    let name = window.personName.value;
     let greeting = getGreeting(name);
     let span = window.helloResult;
     span.textContent = greeting;
