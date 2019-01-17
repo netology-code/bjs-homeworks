@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Обертки для примитивов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="task.js"></script>
+</head>
+
+<body>
+    <input type="text" placeholder="Процентная ставка" id="percent"><br><br>
+    <input type="text" placeholder="Начальный взнос" id="contribution"><br><br>
+    <input type="text" placeholder="Общая стоимость" id="amount"><br><br>
+    <label>Срок ипотеки <input type="date" id="date"></label><br><br>
+    <button onClick="calculateMortgage()">Посчитать общую стоимость ипотеки</button>
+    <span id="mortageResult"></span>
+    <hr>
+    <label>Введите ваше имя: <input type="text" placeholder="Имя" id="personName"></label><br><br>
+    <button onClick="sayHello()">Поздороваться</button>
+    <span id="helloResult"></span>
+</body>
+
+</html>
