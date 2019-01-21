@@ -25,7 +25,7 @@ function getAnimalSound(animal) {
 }
 
 function initCalculateStatement() {
-    for (var idx = 0; idx < 3; idx++) {
+    for (let idx = 0; idx < 3; idx++) {
         const marks = document.getElementById('learner-' + idx).value.split(',');
 
         const average = getAverageMark(marks);
