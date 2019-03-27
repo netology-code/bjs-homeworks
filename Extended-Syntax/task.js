@@ -29,7 +29,7 @@ function askDrink(name,dateOfBirthday){
 }
 
 function calculateAverageRating(){
-    let marks = window.marks.value.split("").map(Number);
+    let marks = window.marks.value.split("").map(Number).filter((n)=> !isNaN(n) && n>0);
     let averageMark = getAverageMark(marks);
     window.averageMark.textContent = averageMark;
 }
