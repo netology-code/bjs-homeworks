@@ -6,11 +6,9 @@
 решила создать специальный класс *StudentLog*, который бы помог ей удобно вносить 
 новые оценки и автоматически пересчитывать средние показатели.
 Реализуйте в классе StudentLog следующие функции:
-
-- внесение оценки по названию предмета,
-- получение средней оценки по предмету,
-- получение средней оценки по всем предметам,
-- получение всех ранее внесённых оценок по предмету.
+- внесение оценки по названию предмета;
+- получение средней оценки по предмету;
+- получение средней оценки по всем предметам.
 
 ![задача 1](img/1-logo.jpg)
 
@@ -19,98 +17,75 @@
 Реализуйте класс «StudentLog»:
 
 1. Передавайте в *конструктор экземпляра* имя ученика:
-<br>
 
-![задача 1. конструктор](img/1-constructor.png)
+```js
+const log = new StudentLog('Олег Никифоров');
+```
 
 2. Создайте метод *getName*, возвращающее имя ученика: 
-<br>
-пример
-<br>
 
-![задача 1. getName](img/1-getName.png)
+```js
+const log = new StudentLog('Олег Никифоров');
+console.log(log.getName()) // Олег Никифоров
+```
 
-<br>
-результат
-<br>
+3. Создайте метод `addGrade(grade, subject)`, который будет вносить оценку 
+по соответствующему предмету. При этом `grade` — оценка, `subject` — предмет.
+Условия работы метода:
++ Метод возвращает количество поставленных оценок по данному предмету. 
++ Оценка ставится числом в пределах от 1 до 5. 
++ **При неверной оценке дополнительно выдаётся сообщение с ошибкой, 
+оценка в журнал не заносится**. Текущее количество оценок все равно требуется вернуть.
 
-![задача 1. getName](img/1-getName.result.png)
+```js
+const log = new StudentLog('Олег Никифоров');
 
-2. Создайте метод *addGrade( grade, subject )*, который будет вносить оценку 
-по соответствующему предмету. При этом grade - оценка, subject - предмет. 
-Метод возвращает количество поставленных оценок по данному предмету. 
-Оценка ставится числом в пределах от 1 до 5. 
-__При неверной оценке дополнительно выдаётся сообщение с ошибкой, 
-оценка в журнал не заносится__:
-<br>
-__пример__
-<br>
+console.log(log.addGrade(3, 'algebra'));
+// 1
 
-![задача 1. addGrade](img/1-addGrade.png)
+console.log(log.addGrade('отлично!', 'math'));
+// Вы пытались поставить оценку "отлично!" по предмету "math". Допускаются только числа от 1 до 5.
+// 0
 
-<br>
-__результат__
-<br>
+console.log(log.addGrade(4, 'algebra'));
+// 1
 
-![задача 1. addGrade](img/1-addGrade.result.png)
+console.log(log.addGrade(5, 'geometry'));
+// 1
 
-3. Создайте метод *getAverageBySubject( subject )*, 
-получающий среднюю оценку по названию предмета.
-При отсутствии предмета нужно выдать 0:
-<br>
-__пример__
-<br>
+console.log(log.addGrade(25, 'geometry'));
+// Вы пытались поставить оценку "25" по предмету "geometry". Допускаются только числа от 1 до 5.
+// 1
+```
 
-![задача 1. getAverageBySubject](img/1-getAverageBySubject.png)
 
-<br>
-__результат__
-<br>
+3. Создайте метод `getAverageBySubject(subject)`, получающий среднюю оценку по названию предмета. При отсутствии предмета нужно выдать 0.
 
-![задача 1. getAverageBySubject](img/1-getAverageBySubject.result.png)
+```js
+const log = new StudentLog('Олег Никифоров');
 
-4. Создайте метод *getTotalAverage*, получающий среднюю оценку по всем предметам.
-__При отсутствии предметов нужно выдать 0__:
-<br>
-__пример__
-<br>
+log.addGrade(2, 'algebra');
+log.addGrade(4, 'algebra');
+log.addGrade(5, 'geometry');
+log.addGrade(4, 'geometry');
 
-![задача 1. getTotalAverage](img/1-getTotalAverage.png)
+console.log(log.getAverageBySubject('geometry')); // 4.5
+console.log(log.getAverageBySubject('algebra')); // 3
+console.log(log.getAverageBySubject('math')); // 0
+```
 
-<br>
-__результат__
-<br>
+4. Создайте метод `getTotalAverage()`, получающий среднюю оценку по всем предметам. Средняя оценка рассчитывается как сумма **всех** оценок на их количество. При отсутствии оценок нужно выдать 0.
 
-![задача 1. getTotalAverage](img/1-getTotalAverage.result.png)
+```js
+const log = new StudentLog('Олег Никифоров');
 
-5. Создайте метод *getGradesBySubject( subject )*, 
-возвращающий список всех оценок по предмету. __При отсутствии предмета в журнале,
-необходимо вернуть пустой массив__:
-<br>
-__пример__
-<br>
+log.addGrade(2, 'algebra');
+log.addGrade(4, 'algebra');
+log.addGrade(5, 'geometry');
+log.addGrade(4, 'geometry');
 
-![задача 1. getGradesBySubject](img/1-getGradesBySubject.png)
-
-<br>
-__результат__
-<br>
-
-![задача 1. getGradesBySubject](img/1-getGradesBySubject.result.png)
-
-6. Создайте метод *getGrades*, возвращающий список всех оценок по всем предметам.
-__В случае отсутствия оценок метод должен вернуть пустой объект__:
-<br>
-__пример__
-<br>
-
-![задача 1. getGradesBySubject](img/1-getGrades.png)
-
-<br>
-__результат__
-<br>
-
-![задача 1. getGradesBySubject](img/1-getGrades.result.png)
+console.log(log.getToralAverage()); // 3,75
+```
 
 ### Критерии выполнения
 
