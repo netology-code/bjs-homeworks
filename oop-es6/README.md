@@ -222,7 +222,7 @@ log.addGrade(4, 'algebra');
 log.addGrade(5, 'geometry');
 log.addGrade(4, 'geometry');
 
-console.log(log.getToralAverage()); // 3,75
+console.log(log.getTotalAverage()); // 3,75
 ```
 
 ### Критерии выполнения
