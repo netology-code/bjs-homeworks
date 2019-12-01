@@ -7,7 +7,7 @@ function initCheckBirthday() {
 }
 
 function checkBirthday(birthday) {
-    // код для задачи №1 писать здесь
+    // код для задачи №3 писать здесь
 }
 
 function initPrintAnimalSound() {
@@ -21,7 +21,7 @@ function initPrintAnimalSound() {
 }
 
 function getAnimalSound(animal) {
-    // код для задачи №2 писать здесь
+    // код для задачи №1 писать здесь
 }
 
 function initCalculateStatement() {
@@ -35,5 +35,5 @@ function initCalculateStatement() {
 }
 
 function getAverageMark(marks) {
-    // код для задачи №3 писать здесь
+    // код для задачи №2 писать здесь
 }
