@@ -10,11 +10,16 @@ function calculateQuadraticEquation() {
 
 function getResult(a, b, c) {
     let d = b * b - 4 * a * c;
-    let array = [x = ((-b + Math.sqrt(d)) / (2 * a)), y = ((-b - Math.sqrt(d)) / (2 * a))];
+    let array = [];
     if (d > 0) {
+        array = [
+            [((-b + Math.sqrt(d)) / (2 * a))],
+            [((-b - Math.sqrt(d)) / (2 * a))]
+        ];
         return array;
     } else if (d === 0) {
-        return array[0];
+        array = [((-b + Math.sqrt(d)) / (2 * a))];
+        return array;
     } else {
         return [];
     }
@@ -27,18 +32,15 @@ function calculateAverageRating() {
 }
 
 function getAverageMark(marks) {
+    let sli = marks.slice(0, 5);
     let sum = 0;
-    if (marks.length <= 5) {
-        for (let i = 0; i < marks.length; i++) {
-            sum = sum + marks[i];
-        }
-        return sum / marks.length;
-    } else if (marks.length > 5) {
-        for (let i = 0; i < 5; i++) {
-            sum = sum + marks[i];
-        }
-        return ("Количество оценок превышает 5" + " " + sum / 5);
+    for (let i = 0; i < sli.length; i++) {
+        sum = sum + sli[i];
     }
+    if (marks.length > 5) {
+        return ("Количество оценок превышает 5" + " " + sum / sli.length);
+    }
+    return sum / sli.length;
 }
 
 function calculateDrinkTask() {
