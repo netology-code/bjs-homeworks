@@ -12,14 +12,12 @@ function getResult(a, b, c) {
     let d = b * b - 4 * a * c;
     let array = [];
     if (d > 0) {
-        array = [
-            [((-b + Math.sqrt(d)) / (2 * a))],
-            [((-b - Math.sqrt(d)) / (2 * a))]
+        return array = [
+            ((-b + Math.sqrt(d)) / (2 * a)),
+            ((-b - Math.sqrt(d)) / (2 * a))
         ];
-        return array;
     } else if (d === 0) {
-        array = [((-b + Math.sqrt(d)) / (2 * a))];
-        return array;
+        return array = [((-b + Math.sqrt(d)) / (2 * a))];
     } else {
         return [];
     }
