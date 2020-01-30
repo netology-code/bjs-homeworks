@@ -19,7 +19,7 @@ function getResult(a,b,c){
 	if (discriminant < 0) {
 		return [];
 	} else if (discriminant == 0) {
-		x = [(-1 * b) / (2 * a)];
+		x = [-b / (2 * a)];
 		return x;
 	} else {
 		x = [((-1 * b) + Math.sqrt(discriminant)) / (2 * a) , ((-1 * b) - Math.sqrt(discriminant)) / (2 * a)];
@@ -50,6 +50,7 @@ function getAverageMark(marks){
 	
 	averageMark = total / marksNew.length;
 	console.log(averageMark);
+	// return total / marksNew.length;
     return averageMark;
 }
 
@@ -67,6 +68,7 @@ function askDrink(name,dateOfBirthday){
 	let yearNow = now.getFullYear();
 	let result;
 	
+	//if(new Date().getFullYear() - dateOfBirthday.getFullYear() > 18)
 	if (yearNow - yearBirthday > 18) {
 		result = `Не желаете ли олд-фэшн, ${name}?`;
 	} else {
