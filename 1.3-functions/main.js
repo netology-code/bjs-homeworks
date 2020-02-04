@@ -35,9 +35,9 @@ console.log(showSolutionsMessage(2, 4, 2));
 //Задача 2
 function getAverageScore(data) {
 	/*let k = 0;
-	let subject;
+	let subject = [];
 	for ( let prop in data ) {
-	  subject = `${prop}`;
+	  subject[k] = `${prop}`;
 	  k = k + 1;
     }*/
 	let sum = [
