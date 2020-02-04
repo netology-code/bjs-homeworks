@@ -17,12 +17,12 @@ describe('Домашнее задание к занятию 2.1 «Обертки
 
   it('Задача №1 должна верно считать кредит, кейс #4', () => {
     const nextYearDate = new Date(new Date().setFullYear(new Date().getFullYear() + 3));
-    expect(calculateTotalMortgage(10, 0, 10000, nextYearDate)).toEqual(11662.05);
+    expect(calculateTotalMortgage(10, 0, 10000, nextYearDate)).toEqual(11616.19);
   });
 
   it('Задача №1 должна верно считать кредит, кейс #5', () => {
-    const nextYearDate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
-    expect(calculateTotalMortgage(15, 0, 10000, nextYearDate)).toEqual(10831);
+    const nextYearDate = new Date(new Date().setFullYear(new Date().getFullYear() + 3));
+    expect(calculateTotalMortgage(15, 0, 10000, nextYearDate)).toEqual(12479.52);
   });
 
   it('Задача №2 должна верно приветствовать анонима при незаданном имени ', () => {
