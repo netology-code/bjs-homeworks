@@ -5,7 +5,7 @@ function calculateQuadraticEquation(){
     let result = getResult(a,b,c);
     window.equation.textContent = `${a}*x^2 + (${b})*x + (${c}) = 0`;
     let span = window.result;
-    span.textContent = "х = "+result.toString();
+    span.textContent = "х = "+JSON.stringify(result);
 }
 
 function calculateAverageRating(){
