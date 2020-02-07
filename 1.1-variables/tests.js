@@ -10,6 +10,6 @@ describe('Домашнее задание к занятию 1.1 «Базовый
     });
 
     it('Задача №3 должна правильно считать формулу', () => {
-      expect(calculateFormula()).toEqual(5);
+      expect(calculateFormula()).toEqual(45);
     });
 });
