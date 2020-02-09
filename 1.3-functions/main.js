@@ -33,36 +33,20 @@ console.log(showSolutionsMessage(7, 20, -3));
 console.log(showSolutionsMessage(2, 4, 2));
 
 //Задача 2
+let totalAverageScore = {};
+
 function getAverageScore(data) {
-	/*let k = 0;
-	let subject = [];
-	for ( let prop in data ) {
-	  subject[k] = `${prop}`;
-	  k = k + 1;
-    }*/
-	let sum = [
-		getAverageMark(data.algebra),
-        getAverageMark(data.geometry),
-        getAverageMark(data.russian),
-		getAverageMark(data.physics),
-		getAverageMark(data.music),
-		getAverageMark(data.english),
-		getAverageMark(data.poetry),
-		getAverageMark(data.chemistry),
-		getAverageMark(data.french),
-	]
-	return {
-		algebra: getAverageMark(data.algebra),
-        geometry: getAverageMark(data.geometry),
-        russian: getAverageMark(data.russian),
-		physics: getAverageMark(data.physics),
-		music: getAverageMark(data.music),
-		english: getAverageMark(data.english),
-		poetry: getAverageMark(data.poetry),
-		chemistry: getAverageMark(data.chemistry),
-		french: getAverageMark(data.french),
-		average: getAverageMark(sum)
+	let k = 0;
+	let average = 0;
+	
+	for(let prop in data) {
+		let subject = prop;
+		k += 1;
+		totalAverageScore[subject] = getAverageMark(data[prop]);
+		average += getAverageMark(data[prop]);
 	};
+	totalAverageScore.average = average / k;
+	return totalAverageScore;
 }
 
 function getAverageMark(marks) {
