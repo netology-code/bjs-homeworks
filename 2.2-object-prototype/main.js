@@ -35,5 +35,13 @@ function initCalculateStatement() {
 }
 
 function getAverageMark(marks) {
-    // код для задачи №2 писать здесь
+    let count = 0;
+    let sum = 0;
+    for (let i = 0; i < marks.length; i++) {
+        count = count + 1;
+        sum = sum + marks[i];
+    }
+    let average = sum / count;
+    let roundedAverage = Math.round(average);
+    return roundedAverage;
 }
