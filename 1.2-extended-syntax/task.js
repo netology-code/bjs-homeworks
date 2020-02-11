@@ -1,3 +1,4 @@
+ master
 function calculateQuadraticEquation() {
     let a = +window.a.value;
     let b = +window.b.value;
@@ -57,3 +58,19 @@ function askDrink(name, dateOfBirthday) {
         return (`Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`);
     }
 }
+
+function getResult(a,b,c){
+    // код для задачи №1 писать здесь
+    // return x;
+}
+
+function getAverageMark(marks){
+    // код для задачи №2 писать здесь
+    // return averageMark;
+}
+
+function askDrink(name,dateOfBirthday){
+    // код для задачи №3 писать здесь
+    // return result;
+}
+ master
