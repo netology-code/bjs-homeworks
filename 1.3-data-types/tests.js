@@ -1,4 +1,4 @@
-describe('Домашнее задание к занятию 2.1 «Обертки для примитивов»', () => {
+describe('Домашнее задание к занятию 1.3 «Типы данных»', () => {
   it('Задача №1 должна верно считать кредит, кейс #1', () => {
     const nextYearDate = new Date(new Date().setFullYear(new Date().getFullYear() + 1));
     console.log(nextYearDate);
