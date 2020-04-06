@@ -1,7 +1,6 @@
 describe('Домашнее задание к занятию 2.3 «ООП в JS (ES6)»', () => {
 
   let weapon;
-  let studentLog;
 
   beforeEach(function(){
     weapon = new Weapon({
@@ -10,8 +9,6 @@ describe('Домашнее задание к занятию 2.3 «ООП в JS (
       durability: 10,
       range: 1,
     });
-
-    studentLog = new StudentLog("Иван Петров");
   }) 
 
   it('Задача №1 Создание простого оружия', () => {
@@ -115,20 +112,24 @@ describe('Домашнее задание к занятию 2.3 «ООП в JS (
   });
 
   it('Задача №3 Создание объекта StudentLog', () => {
+    studentLog = new StudentLog("Иван Петров");
     expect(studentLog).toBeDefined();
   });
 
   it('Задача №3 Получение имени студента', () => {
+    studentLog = new StudentLog("Иван Петров");
     expect(studentLog.getName()).toEqual("Иван Петров");
   });
 
   it('Задача №3 Подсчёт средней оценки по предмету', () => {
+    studentLog = new StudentLog("Иван Петров");
     studentLog.addGrade(3, "algebra");
     studentLog.addGrade(5, "algebra");
     expect(studentLog.getAverageBySubject("algebra")).toEqual(4);
   });
 
   it('Задача №3 Подсчёт общей средней оценки', () => {
+    studentLog = new StudentLog("Иван Петров");
     studentLog.addGrade(3, "algebra");
     studentLog.addGrade(5, "algebra");
     studentLog.addGrade(5, "geometry");
