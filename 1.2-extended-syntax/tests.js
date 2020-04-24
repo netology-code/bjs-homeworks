@@ -33,7 +33,7 @@ describe('Домашнее задание к занятию 1.2 «Расшире
 
     it('Задача №3 должна предлагать олд-фэшн', () => {
       const name = 'Иван';
-      const date = new Date(4, 6, 1993);
+      const date = new Date(1993, 4, 6);
       const actualResult = `Не желаете ли олд-фэшн, ${name}?`;
       expect(askDrink(name, date)).toEqual(actualResult);
     });
