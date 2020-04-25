@@ -57,7 +57,12 @@ describe('Домашнее задание к занятию 3.3 «Асинхро
 
   it('Будильник не должен создавать таймер с одинаковым id', () => {
     clock.addClock("16:45", f => f, 1);
-    expect(() => clock.addClock("16:45", f => f, 1)).toThrow();
+    clock.addClock("16:45", f => f, 1);
+    expect(clock.alarmCollection.length).toEqual(1);
+  });
+
+  it('Будильник должен выбрасывать объект ошибки, если id не был передан', () => {
+    expect(() => clock.addClock("16:45", f => f)).toThrow();
   });
 
 });
