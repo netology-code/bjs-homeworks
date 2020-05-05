@@ -25,4 +25,10 @@ describe('Домашнее задание к занятию 3.2 «Прототи
     const mSum = memorize((a,b,c,d) => a + b + c + d, 10)
     expect(mSum(3, 8, 6, 7)).toEqual(24);
   });
+
+  it('Функция memorize должна возвращать сумму нескольких чисел (значение из памяти)', () => {
+    const mSum = memorize((a,b,c,d) => a + b + c + d, 10)
+    expect(mSum(3, 8, 6, 7)).toEqual(24);
+    expect(mSum(3, 8, 6, 7)).toEqual(24);
+  });
 });
