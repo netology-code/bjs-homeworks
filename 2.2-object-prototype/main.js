@@ -10,8 +10,8 @@ function initPrintAnimalSound() {
 
 function initCalculateStatement() {
     for (let idx = 0; idx < 3; idx++) {
-        const marks = document.getElementById('learner-' + idx).value.split(',');
-
+        let marks = document.getElementById('learner-' + idx).value.split(',');
+        marks = marks.map(Number);
         const average = getAverageMark(marks);
 
         document.getElementById('learner-' + idx + '-average').innerHTML = average;
