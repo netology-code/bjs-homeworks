@@ -186,7 +186,7 @@ console.log(log.addGrade('отлично!', 'math'));
 // 0
 
 console.log(log.addGrade(4, 'algebra'));
-// 1
+// 2
 
 console.log(log.addGrade(5, 'geometry'));
 // 1
