@@ -31,4 +31,30 @@ describe('Домашнее задание к занятию 3.2 «Прототи
     expect(mSum(3, 8, 6, 7)).toEqual(24);
     expect(mSum(3, 8, 6, 7)).toEqual(24);
   });
+
+  it('оптимизированная функция должна считать быстрей обычной ', () => {
+    const sleep = (milliseconds) => {
+      let e = new Date().getTime() + milliseconds;
+      while (new Date().getTime() <= e) {}
+    };
+
+    const sum = (a, b) => {
+      sleep(100); 
+      return a + b;
+    }
+    const mSum = memorize(sum, 10);
+    debugger;
+
+    let sumTime = performance.now();
+    sum(4,5);
+    sum(4,5);
+    sumTime = performance.now() - sumTime;
+
+    let mSumTime = performance.now();
+    mSum(4,5);
+    mSum(4,5);
+    mSumTime = performance.now() - mSumTime;
+
+    expect(sumTime).toBeGreaterThan(mSumTime);
+  });
 });
