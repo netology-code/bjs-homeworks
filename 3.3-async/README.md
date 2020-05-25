@@ -61,7 +61,7 @@
 
 Результат работы должен быть примерно таким (код выполнялся по командам из консоли):
 
-![](https://sun9-24.userapi.com/c857728/v857728398/10f019/lTOxDlfLQWc.jpg)
+![](https://sun1-24.userapi.com/4e78x8Gim59SbBdHgqnEpIbGJiUkjbFP0dhT9A/bLPY-cmewxY.jpg)
 
 ### Критерии выполнения
 
