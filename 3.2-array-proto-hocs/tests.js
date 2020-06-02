@@ -32,6 +32,13 @@ describe('Домашнее задание к занятию 3.2 «Прототи
     expect(mSum(3, 8, 6, 7)).toEqual(24);
   });
 
+  it('функция memorize должна возвращать функцию, отличающуюся от полученной', () => {
+    const inputFunction = (a,b,c,d) => a + b + c + d;
+    const mSum = memorize(inputFunction, 10);
+    expect(typeof mSum).toEqual('function');
+    expect(mSum == inputFunction).toBeFalsy();
+  });
+
   it('оптимизированная функция должна считать быстрей обычной ', () => {
     const sleep = (milliseconds) => {
       let e = new Date().getTime() + milliseconds;

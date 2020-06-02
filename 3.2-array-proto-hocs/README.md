@@ -25,7 +25,7 @@ function sleep(milliseconds)
 ```javascript
 function sum(...args) {
   // Замедление на половину секунды.
-  sleep(500); // Можно использовать другое значение замедления.
+  sleep(100); // Можно использовать другое значение замедления.
   return args.reduce((sum, arg) => {
     return sum += +arg;
   }, 0);
