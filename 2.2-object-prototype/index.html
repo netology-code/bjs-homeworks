@@ -11,9 +11,10 @@
 <body>
     <h3>Задача №1</h3>
     <div>
-        <button onClick="initPrintAnimalSound()">Каково звучание тигра?</button>
+        <input type="text" placeholder="Строка для проверки" id="palindromeInput"><br><br>
+        <button onClick="polindromChecker()">Проверить значение на полиндром</button>
         <br><br>
-        <div id="sound">Пока непонятно, нажмите на кнопку выше</div>
+        <div id="checkedValue">Пока непонятно, нажмите на кнопку выше</div>
     </div>
     <hr />    
     <h3>Задача №2</h3>
@@ -53,7 +54,7 @@
         <div id="disclaimer">Пока непонятно, введите дату рождения</div>
     </div>
     <hr />
-    <script src="main.js"></script>
     <script src="task.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

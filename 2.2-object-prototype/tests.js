@@ -1,11 +1,27 @@
 describe('Домашнее задание к занятию 2.2 «Прототип и конструктор объекта»', () => {
   describe('Задача №1', () => {
-    it('должна возвращать null при отсутствующем животном', () => {
-      expect(getAnimalSound()).toBeNull();
+    it('должна возвращать true для "Ароза упала на лапу Азора"', () => {
+      expect("А роза упала на лапу Азора".isPalindrome()).toBeTruthy();
     });
 
-    it('должна возвращать голос животного', () => {
-      expect(getAnimalSound({sound: 'grrrr'})).toEqual('grrrr');
+    it('должна возвращать true для "Ад гонит иногда"', () => {
+      expect("Ад гонит иногда".isPalindrome()).toBeTruthy();
+    });
+
+    it('должна возвращать true для "сел лес"', () => {
+      expect("сел лес".isPalindrome()).toBeTruthy();
+    });
+
+    it('должна возвращать true для "еле-еле"', () => {
+      expect("еле-еле".isPalindrome()).toBeTruthy();
+    });
+
+    it('должна возвращать false для "еле-еле шёл Емеля!"', () => {
+      expect("еле-еле шёл Емеля!".isPalindrome()).toBeFalsy();
+    });
+
+    it('должна возвращать false для "Иван Васильевич меняет профессию"', () => {
+      expect("Иван Васильевич меняет профессию".isPalindrome()).toBeFalsy();
     });
   });
 

@@ -1,11 +1,6 @@
-function initPrintAnimalSound() {
-    const animal = {
-        sound: 'grrrr',
-    };
-
-    const result = getAnimalSound(animal);
-
-    document.getElementById('sound').innerHTML = result;   
+function polindromChecker() {
+    const result = palindromeInput.value.isPalindrome(palindromeInput.value);
+    checkedValue.innerText = `Строка ${!result && "не " || ""}является полиндромом`;
 }
 
 function initCalculateStatement() {
