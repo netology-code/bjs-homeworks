@@ -1,7 +1,4 @@
-function getAnimalSound(animal) {
-    // код для задачи №1 писать здесь
-    // return animalSound;
-}
+//String.prototype.isPalindrome - для задачи №1
 
 function getAverageMark(marks) {
     // код для задачи №2 писать здесь
