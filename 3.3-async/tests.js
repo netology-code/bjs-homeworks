@@ -1,10 +1,10 @@
 describe('Домашнее задание к занятию 3.3 «Асинхронность»', () => {
 
-  let clock; 
+  let clock;
 
   beforeEach(function(){
     clock = new AlarmClock();
-  }) 
+  })
 
   it('необходимо создавать объект будильник', () => {
     expect(clock).toBeTruthy();
@@ -46,7 +46,7 @@ describe('Домашнее задание к занятию 3.3 «Асинхро
     expect(clock.timerId).toBeNull();
   });
 
-  it('будильник должен создавать звонки, а затем очищать из все', () => {
+  it('Будильник должен создавать звонки, а затем очищать их все', () => {
     clock.addClock("16:45", f => f, 1);
     clock.addClock("16:45", f => f, 2);
     clock.addClock("16:45", f => f, 3);
