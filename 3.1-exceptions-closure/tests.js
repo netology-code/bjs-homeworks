@@ -19,6 +19,10 @@ describe('Домашнее задание к занятию 3.1 «Обработ
         it('функция validateCount не должна парсить невалидное значение', () => {
             expect(validateCount("ыфва")).toEqual(new Error("Невалидное значение"));
         });
+
+        it('функция validateCount должна возвращать перехваченную ошибку', () => {
+            expect(validateCount("ыфва").stack.includes("parseCount")).toBeTruthy();
+        });
     });
 
     describe('Задача №2', () => {
