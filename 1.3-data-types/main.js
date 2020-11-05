@@ -1,7 +1,7 @@
 function calculateMortgage() {
-    let percent = Number.parseInt(window.percent.value);
-    let contribution = Number.parseInt(window.contribution.value);
-    let amount = Number.parseInt(window.amount.value);
+    let percent = window.percent.value;
+    let contribution = window.contribution.value;
+    let amount = window.amount.value;
     let date = new Date(window.date.value);
 
     let result = calculateTotalMortgage(percent, contribution, amount, date);
