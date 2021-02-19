@@ -127,8 +127,8 @@ describe('Домашнее задание к занятию 2.3 «ООП в JS (
     it('подсчёт общей средней оценки', () => {
       studentLog.addGrade(3, "algebra");
       studentLog.addGrade(5, "algebra");
-      studentLog.addGrade(5, "geometry");
-      studentLog.addGrade(5, "geometry");
+      studentLog.addGrade(5, "history");
+      studentLog.addGrade(5, "history");
       expect(studentLog.getTotalAverage()).toEqual(4.5);
     });
   });
