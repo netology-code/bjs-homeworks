@@ -80,5 +80,5 @@ URL адрес этой страницы будет являться URL адр�
 [2]: https://code.visualstudio.com/
 [3]: https://github.com/netology-code/guides/tree/master/github
 [4]: https://git-scm.com/
-[5]: https://github.com/netology-code/guides/blob/master/git/REAMDE.md
+[5]: https://github.com/netology-code/guides/blob/master/git/README.md
 [6]: https://netology.ru/
